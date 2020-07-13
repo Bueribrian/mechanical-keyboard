@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import KeycapComponent from "../keycap/KeycapComponent";
-import adjust from '../utils'
+// import adjust from '../utils'
 import KeySound1 from "../../assets/sounds/keycap-sound-1.mp3";
 import KeySound2 from "../../assets/sounds/keycap-sound-2.mp3";
 import KeySound3 from "../../assets/sounds/keycap-sound-3.mp3";
