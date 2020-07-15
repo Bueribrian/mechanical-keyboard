@@ -11,18 +11,18 @@ const audio3 = new Audio(KeySound3);
 
 
 const Keyboard = styled.div`
-  width: 1500px;
+  width: 980px;
   height: auto;
   margin: 0 auto;
   display:grid;
-  grid-gap:.5rem .3rem;
-  grid-template-columns:repeat(30,1fr);
+  grid-gap:.1rem;
+  grid-template-columns:repeat(29,1fr);
   grid-template-rows:repeat(4,1fr);
   justify-content:center;
-  background:#000;
-  padding:3rem;
+  background:${props => props.background2};
+  padding:.2rem;
   margin-top:15rem;
-  border-radius:18px;
+  border-radius:8px;
 `;
 
 export default class KeyboardComponent extends Component {
@@ -32,133 +32,133 @@ export default class KeyboardComponent extends Component {
       keycapsArray: [
         {
           code: "`",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'`',
           ref: React.createRef(),
         },
         {
           code: "1",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'1',
           ref: React.createRef(),
         },
         {
           code: "2",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'2',
           ref: React.createRef(),
         },
         {
           code: "3",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'3',
           ref: React.createRef(),
         },
         {
           code: "4",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'4',
           ref: React.createRef(),
         },
         {
           code: "5",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'5',
           ref: React.createRef(),
         },
         {
           code: "6",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'6',
           ref: React.createRef(),
         },
         {
           code: "7",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'7',
           ref: React.createRef(),
         },
         {
           code: "8",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'8',
           ref: React.createRef(),
         },
         {
           code: "9",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'9',
           ref: React.createRef(),
         },
         {
           code: "0",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'0',
           ref: React.createRef(),
         },
         {
           code: "-",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'-',
           ref: React.createRef(),
         },
         {
           code: "=",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'+',
           ref: React.createRef(),
         },
         {
           code: "Backspace",
-          color: "#c821ed",
+          color: "#fff",
           size:'3',
           text:'Backspace',
           ref: React.createRef(),
         },
         {
           code: "Tab",
-          color: "#c821ed",
+          color: "#fff",
           size:'3',
           text:'Tab',
           ref: React.createRef(),
         },
         {
           code: "q",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'q',
           ref: React.createRef(),
         },
         {
           code: "w",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'w',
           ref: React.createRef(),
         },
         {
           code: "e",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'e',
           ref: React.createRef(),
         },
         {
           code: "r",
-          color: "#c821ed",
+          color: "#fff",
           background: "#aaa",
           size:'2',
           text:'r',
@@ -166,21 +166,21 @@ export default class KeyboardComponent extends Component {
         },
         {
           code: "t",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'t',
           ref: React.createRef(),
         },
         {
           code: "y",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'y',
           ref: React.createRef(),
         },
         {
           code: "u",
-          color: "#c821ed",
+          color: "#fff",
           size:'2',
           text:'u',
           ref: React.createRef(),
@@ -406,7 +406,7 @@ export default class KeyboardComponent extends Component {
         {
           code: "ShiftRight",
           color: "#fff",
-          size:'5',
+          size:'4',
           text:'Shift',
           ref: React.createRef(),
         },
@@ -414,9 +414,24 @@ export default class KeyboardComponent extends Component {
           code: "Control",
           color: "#fff",
           size:'2',
-          text:'Control',
+          text:'Ctrl',
           ref: React.createRef(),
         },
+        {
+          code: "",
+          color: "#fff",
+          size:'2',
+          text:'',
+          ref: React.createRef(),
+        },
+        {
+          code: "",
+          color: "#fff",
+          size:'2',
+          text:'⬜',
+          ref: React.createRef(),
+        },
+
         {
           code: "AltRight",
           color: "#fff",
@@ -427,7 +442,7 @@ export default class KeyboardComponent extends Component {
         {
           code: " ",
           color: "#fff",
-          size:'8',
+          size:'17',
           text:'Space',
           ref: React.createRef(),
         },
@@ -438,17 +453,25 @@ export default class KeyboardComponent extends Component {
           text:'Alt',
           ref: React.createRef(),
         },
+        {
+          code: "AltLeft",
+          color: "#fff",
+          size:'2',
+          text:'Ctrl',
+          ref: React.createRef(),
+        },
       ],
-      keyBackground:"#777",
-      keyBackground2:"#888",
+      keyBackground:"#2e2e2e",
+      keyBackground2:"#f514aa",
       keyColor:"#fff",
-      volume:0.1
+      volume:1
     };
   }
   handleKeyPressed(ref){
     setTimeout(() => {
         if(ref){
-            ref.current.style.background = this.state.keyBackground;
+            ref.current.parentNode.style.transform = "scale(1)";
+            // ref.current.parentNode.style.filter = "brightness(100%)";
         }
       }, 100);
   }
@@ -488,8 +511,10 @@ export default class KeyboardComponent extends Component {
         keycapsArray: prev.keycapsArray.map((key) => {
           if (key.code.toLowerCase() === keypressed.toLowerCase()) {
             key.background = "#000";
-            key.ref.current.style.transition = ".3s all";
-            key.ref.current.style.background = "#000";
+            console.log(key.ref.current.parentNode)
+            key.ref.current.parentNode.style.transition = ".2s all";
+            key.ref.current.parentNode.style.transform = "scale(0.85)";
+            // key.ref.current.parentNode.style.filter = "brightness(60%)";
             keyref = key.ref;
           }
           return key;
@@ -505,7 +530,7 @@ export default class KeyboardComponent extends Component {
       <>
       <input autoFocus>
       </input>
-      <Keyboard>
+      <Keyboard background2={this.state.keyBackground2}>
         {this.state.keycapsArray.map((keycap) => (
           <KeycapComponent
             reference={keycap.ref}
