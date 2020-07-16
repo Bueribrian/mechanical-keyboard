@@ -572,7 +572,6 @@ export default class KeyboardComponent extends Component {
       let keypressed = event.code;
       let randomNumber = Math.floor(Math.random() * 3)
       let keyref;
-      console.log(randomNumber)
       switch(randomNumber){
         case 0:
           audio.currentTime = 0.25;
@@ -596,14 +595,11 @@ export default class KeyboardComponent extends Component {
           break;
       }
 
-      console.log(event.keyCode)
-      console.log(event)
 
       this.setState((prev) => ({
         keycapsArray: prev.keycapsArray.map((key) => {
           if (key.code.toLowerCase() === keypressed.toLowerCase()) {
             key.background = "#000";
-            console.log(key.ref.current.parentNode)
             key.ref.current.parentNode.style.transition = ".2s all";
             key.ref.current.parentNode.style.transform = "scale(0.89, 0.85)";
             key.ref.current.parentNode.style.borderRadius = "1px";
