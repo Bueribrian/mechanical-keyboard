@@ -14,7 +14,8 @@ const KeyDiv = styled.div`
 width:98%;
 height:100%;
 background:${props=>adjust(props.background,20)};
-color:${props => props.background2};
+color:${props => props.fontColor};
+text-shadow: 0px 1px 1px ${props => props.fontColor};
 stext-transform:uppercase;
 text-align:right;
 font-family: 'Roboto', sans-serif;
@@ -32,8 +33,8 @@ z-index:5;
 
 export default function KeycapComponent(props) {
     return(
-        <KeyDivContainer id={props.id} background={props.background}  background2={props.background2} color={props.color} size={props.size}>
-            <KeyDiv background={props.background} background2={props.background2} color={props.color} ref={props.reference}>
+        <KeyDivContainer id={props.id} background={props.background}  fontColor={props.fontColor} color={props.color} size={props.size}>
+            <KeyDiv background={props.background} fontColor={props.fontColor} color={props.color} ref={props.reference}>
                 {props.text}
             </KeyDiv>
         </KeyDivContainer>

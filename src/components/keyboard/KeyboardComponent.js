@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import KeycapComponent from "../keycap/KeycapComponent";
-// import adjust from '../utils'
+import adjust from '../utils'
 import KeySound1 from "../../assets/sounds/keycap-sound-1.mp3";
 import KeySound2 from "../../assets/sounds/keycap-sound-2.mp3";
 import KeySound3 from "../../assets/sounds/keycap-sound-3.mp3";
@@ -19,21 +19,22 @@ const KeyboardContainer = styled.div`
   display:flex;
   justify-content:center;
   align-items:center;
-  background:gray;
-  padding:3rem;
+  background:#333333;
+  padding:1.5rem;
   border-radius:4px;
   box-shadow:3px 3px 8px rgba(0,0,0,0.3);
 `
 
 const Keyboard = styled.div`
   display:grid;
-  grid-gap:.2rem 0rem;
+  grid-gap:.3rem 0rem;
   grid-template-columns:repeat(29,1fr);
   grid-template-rows:repeat(5,50px);
   justify-content:center;
-  background:#000;
-  padding:.4rem;
-  padding-bottom:.7rem;
+  background:${props=>adjust(props.background2,-10)};
+  box-shadow:inset 3px 3px 8px ${props=>props.background2};
+  padding:.05rem;
+  padding-bottom:.4rem;
   border-radius:8px;
 `;
 
@@ -534,11 +535,15 @@ export default class KeyboardComponent extends Component {
         },
       ],
       keyBackground:"#64f2da",
-      keyBackground2:"#222222",
+      fontColor:"#ffffff",
       keyColor:"#fff",
       volume:1
     };
+    this.setVolume = this.setVolume.bind(this)
+    this.setKeycapBackground = this.setKeycapBackground.bind(this)
+    this.setFontColor = this.setFontColor.bind(this)
   }
+
   handleKeyPressed(ref){
     setTimeout(() => {
         if(ref){
@@ -548,7 +553,20 @@ export default class KeyboardComponent extends Component {
         }
       }, 100);
   }
+
+  setVolume(volume){
+    this.setState({volume})
+  }
+
+  setKeycapBackground(keyBackground){
+    this.setState({keyBackground})
+  }
+
+  setFontColor(fontColor){
+    this.setState({fontColor})
+  }
   
+
   componentDidMount() {
     window.addEventListener("keydown", (event) => {
       let keypressed = event.code;
@@ -601,13 +619,14 @@ export default class KeyboardComponent extends Component {
     window.addEventListener("keyup",()=>{
     })
   }
+
   render() {
     return (
       <>
       <input autoFocus>
       </input>
       <KeyboardContainer>
-        <Keyboard background2={this.state.keyBackground2}>
+        <Keyboard background2={this.state.fontColor}>
           {this.state.keycapsArray.map((keycap) => (
             <KeycapComponent
               id={keycap.code}
@@ -617,13 +636,13 @@ export default class KeyboardComponent extends Component {
               text={keycap.text}
               color={keycap.color}
               background={this.state.keyBackground}
-              background2={this.state.keyBackground2}
+              fontColor={this.state.fontColor}
             />
           ))}
         </Keyboard>
       </KeyboardContainer>
 
-      <ControllerStatsComponent />
+      <ControllerStatsComponent background={this.state.keyBackground} fontColor={this.state.fontColor} volume={this.state.volume} background2={this.state.background2} handleFontColor={this.setFontColor} handleBackground={this.setKeycapBackground} handleVolume={this.setVolume} />
       </>
     );
   }
