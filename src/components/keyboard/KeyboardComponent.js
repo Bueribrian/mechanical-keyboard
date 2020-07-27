@@ -596,7 +596,8 @@ export default class KeyboardComponent extends Component {
       ],
       keyBackground:"#777777",
       fontColor:"#ffffff",
-      volume:1
+      volume:1,
+      isloaded: false
     };
     this.setVolume = this.setVolume.bind(this)
     this.setKeycapBackground = this.setKeycapBackground.bind(this)
@@ -604,12 +605,11 @@ export default class KeyboardComponent extends Component {
     this.searchKeycap = this.searchKeycap.bind(this)
   }
   
-  searchKeycap(ref){
-    alert('estoy en hover')
+  searchKeycap(ref,background){
     this.setState(prev=>({
       keycapsArray: prev.keycapsArray.map((key) => {
         if(key.ref === ref){
-          key.background = "#000000"
+          key.background = background
         }
         return key
       })
@@ -698,12 +698,15 @@ export default class KeyboardComponent extends Component {
 
     });
 
+    this.setState({
+      isloaded: true
+    })
+
     
   }
 
   render() {
-    return (
-      <>
+    return (this.state.isloaded ?  <>
       <input autoFocus>
       </input>
       <KeyboardContainer>
@@ -725,7 +728,5 @@ export default class KeyboardComponent extends Component {
       </KeyboardContainer>
 
       <ControllerStatsComponent background={this.state.keyBackground} fontColor={this.state.fontColor} volume={this.state.volume} background2={this.state.background2} handleFontColor={this.setFontColor} handleBackground={this.setKeycapBackground} handleVolume={this.setVolume} />
-      </>
-    );
-  }
-}
+      </> : <div>Loading...</div>)
+}}
