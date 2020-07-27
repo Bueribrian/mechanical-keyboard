@@ -6,6 +6,7 @@ import KeySound1 from "../../assets/sounds/keycap-sound-1.mp3";
 import KeySound2 from "../../assets/sounds/keycap-sound-2.mp3";
 import KeySound3 from "../../assets/sounds/keycap-sound-3.mp3";
 import ControllerStatsComponent from "../controllerStats/ControllerStatsComponent";
+
 const audio = new Audio(KeySound1);
 const audio2 = new Audio(KeySound2);
 const audio3 = new Audio(KeySound3);
@@ -47,6 +48,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Backquote",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'`',
           ref: React.createRef(),
@@ -55,6 +57,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit1",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'1',
           ref: React.createRef(),
@@ -63,6 +66,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit2",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'2',
           ref: React.createRef(),
@@ -71,6 +75,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit3",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'3',
           ref: React.createRef(),
@@ -79,6 +84,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit4",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'4',
           ref: React.createRef(),
@@ -87,6 +93,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit5",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'5',
           ref: React.createRef(),
@@ -95,6 +102,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit6",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'6',
           ref: React.createRef(),
@@ -103,6 +111,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit7",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'7',
           ref: React.createRef(),
@@ -111,6 +120,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit8",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'8',
           ref: React.createRef(),
@@ -119,6 +129,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit9",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'9',
           ref: React.createRef(),
@@ -127,6 +138,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Digit0",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'0',
           ref: React.createRef(),
@@ -135,6 +147,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Minus",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'-',
           ref: React.createRef(),
@@ -143,6 +156,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Equal",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'+',
           ref: React.createRef(),
@@ -151,6 +165,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Backspace",
           color: "#fff",
+          background:'#000',
           size:'3',
           text:'Backspace',
           ref: React.createRef(),
@@ -159,6 +174,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Tab",
           color: "#fff",
+          background:'#000',
           size:'3',
           text:'Tab',
           ref: React.createRef(),
@@ -167,6 +183,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyq",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'q',
           ref: React.createRef(),
@@ -175,6 +192,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyw",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'w',
           ref: React.createRef(),
@@ -183,6 +201,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keye",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'e',
           ref: React.createRef(),
@@ -191,7 +210,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyr",
           color: "#fff",
-          background: "#aaa",
+          background:'#000',
           size:'2',
           text:'r',
           ref: React.createRef(),
@@ -200,6 +219,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyt",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'t',
           ref: React.createRef(),
@@ -208,6 +228,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyy",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'y',
           ref: React.createRef(),
@@ -216,6 +237,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyu",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'u',
           ref: React.createRef(),
@@ -224,6 +246,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyi",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'i',
           ref: React.createRef(),
@@ -232,6 +255,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyo",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'o',
           ref: React.createRef(),
@@ -240,6 +264,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyp",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'p',
           ref: React.createRef(),
@@ -248,6 +273,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "BracketLeft",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'[',
           ref: React.createRef(),
@@ -256,6 +282,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "BracketRight",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:']',
           ref: React.createRef(),
@@ -265,6 +292,7 @@ export default class KeyboardComponent extends Component {
           code: "Backslash",
           chadCode: "92",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'\\',
           ref: React.createRef(),
@@ -274,6 +302,7 @@ export default class KeyboardComponent extends Component {
           code: "CapsLock",
           chadCode: "92",
           color: "#fff",
+          background:'#000',
           size:'4',
           text:'Caps Lock',
           ref: React.createRef(),
@@ -283,6 +312,7 @@ export default class KeyboardComponent extends Component {
           code: "Keya",
           chadCode: "92",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'a',
           ref: React.createRef(),
@@ -292,6 +322,7 @@ export default class KeyboardComponent extends Component {
           code: "Keys",
           chadCode: "92",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'s',
           ref: React.createRef(),
@@ -301,6 +332,7 @@ export default class KeyboardComponent extends Component {
           code: "Keyd",
           chadCode: "92",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'d',
           ref: React.createRef(),
@@ -310,6 +342,7 @@ export default class KeyboardComponent extends Component {
           code: "Keyf",
           chadCode: "92",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'f',
           ref: React.createRef(),
@@ -319,6 +352,7 @@ export default class KeyboardComponent extends Component {
           code: "Keyg",
           chadCode: "92",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'g',
           ref: React.createRef(),
@@ -328,6 +362,7 @@ export default class KeyboardComponent extends Component {
           code: "Keyh",
           chadCode: "h",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'h',
           ref: React.createRef(),
@@ -336,6 +371,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyj",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'j',
           ref: React.createRef(),
@@ -344,6 +380,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyk",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'k',
           ref: React.createRef(),
@@ -352,6 +389,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyl",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'l',
           ref: React.createRef(),
@@ -360,6 +398,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Semicolon",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:';',
           ref: React.createRef(),
@@ -368,6 +407,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Quote",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:"'",
           ref: React.createRef(),
@@ -376,6 +416,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Enter",
           color: "#fff",
+          background:'#000',
           size:'3',
           text:'Enter',
           ref: React.createRef(),
@@ -384,6 +425,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "ShiftLeft",
           color: "#fff",
+          background:'#000',
           size:'5',
           text:'Shift',
           ref: React.createRef(),
@@ -392,6 +434,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyz",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'z',
           ref: React.createRef(),
@@ -400,6 +443,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyx",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'x',
           ref: React.createRef(),
@@ -408,6 +452,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyc",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'c',
           ref: React.createRef(),
@@ -416,6 +461,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyv",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'v',
           ref: React.createRef(),
@@ -424,6 +470,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyb",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'b',
           ref: React.createRef(),
@@ -432,6 +479,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keyn",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'n',
           ref: React.createRef(),
@@ -440,6 +488,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Keym",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'m',
           ref: React.createRef(),
@@ -448,6 +497,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Comma",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:',',
           ref: React.createRef(),
@@ -456,6 +506,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Period",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'.',
           ref: React.createRef(),
@@ -464,6 +515,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Slash",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'/',
           ref: React.createRef(),
@@ -472,6 +524,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "ShiftRight",
           color: "#fff",
+          background:'#000',
           size:'4',
           text:'Shift',
           ref: React.createRef(),
@@ -480,6 +533,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "ControlLeft",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'Ctrl',
           ref: React.createRef(),
@@ -488,6 +542,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Empty1",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'',
           ref: React.createRef(),
@@ -496,6 +551,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Empty2",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'⬜',
           ref: React.createRef(),
@@ -505,6 +561,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "AltLeft",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'Alt',
           ref: React.createRef(),
@@ -513,6 +570,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "Space",
           color: "#fff",
+          background:'#000',
           size:'17',
           text:' ',
           ref: React.createRef(),
@@ -521,6 +579,7 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "AltRight",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'Alt',
           ref: React.createRef(),
@@ -529,19 +588,32 @@ export default class KeyboardComponent extends Component {
           keycode:'',
           code: "ControlRight",
           color: "#fff",
+          background:'#000',
           size:'2',
           text:'Ctrl',
           ref: React.createRef(),
         },
       ],
-      keyBackground:"#64f2da",
+      keyBackground:"#777777",
       fontColor:"#ffffff",
-      keyColor:"#fff",
       volume:1
     };
     this.setVolume = this.setVolume.bind(this)
     this.setKeycapBackground = this.setKeycapBackground.bind(this)
     this.setFontColor = this.setFontColor.bind(this)
+    this.searchKeycap = this.searchKeycap.bind(this)
+  }
+  
+  searchKeycap(ref){
+    alert('estoy en hover')
+    this.setState(prev=>({
+      keycapsArray: prev.keycapsArray.map((key) => {
+        if(key.ref === ref){
+          key.background = "#000000"
+        }
+        return key
+      })
+    }))
   }
 
   handleKeyPressed(ref){
@@ -559,7 +631,14 @@ export default class KeyboardComponent extends Component {
   }
 
   setKeycapBackground(keyBackground){
-    this.setState({keyBackground})
+    this.setState({
+      keyBackground: keyBackground,
+      keycapsArray: this.state.keycapsArray.map((key)=>{
+        key.background = this.state.keyBackground
+        return key
+        })
+    })
+
   }
 
   setFontColor(fontColor){
@@ -568,6 +647,13 @@ export default class KeyboardComponent extends Component {
   
 
   componentDidMount() {
+    this.setState({
+      keycapsArray: this.state.keycapsArray.map((key)=>{
+        key.background = this.state.keyBackground
+        return key
+        })
+    })
+
     window.addEventListener("keydown", (event) => {
       let keypressed = event.code;
       let randomNumber = Math.floor(Math.random() * 3)
@@ -599,21 +685,20 @@ export default class KeyboardComponent extends Component {
       this.setState((prev) => ({
         keycapsArray: prev.keycapsArray.map((key) => {
           if (key.code.toLowerCase() === keypressed.toLowerCase()) {
-            key.background = "#000";
             key.ref.current.parentNode.style.transition = ".2s all";
             key.ref.current.parentNode.style.transform = "scale(0.89, 0.85)";
             key.ref.current.parentNode.style.borderRadius = "1px";
-            // key.ref.current.parentNode.style.filter = "brightness(60%)";
             keyref = key.ref;
           }
           return key;
         }),
       }));
+     
       this.handleKeyPressed(keyref)
 
     });
-    window.addEventListener("keyup",()=>{
-    })
+
+    
   }
 
   render() {
@@ -631,8 +716,9 @@ export default class KeyboardComponent extends Component {
               size={keycap.size}
               text={keycap.text}
               color={keycap.color}
-              background={this.state.keyBackground}
+              background={keycap.background}
               fontColor={this.state.fontColor}
+              searchKeycap={this.searchKeycap}
             />
           ))}
         </Keyboard>
