@@ -35,27 +35,41 @@ transition: .2s all;
 
 
 &:hover{
-    transform:scale(1.3) translateY(-10%);
+    transform:scale(1.1) translateY(-10%);
     transition: .2s all;
-    background:yellow;
+    background:${props=>adjust(props.background,20)};
+    border-color: ${props=>adjust(props.background,10)} ${props=>adjust(props.background,15)} ${props=> adjust(props.background,30)};
 }
 `
 const ControllerKeycapDiv = styled.div`
 position:absolute;
-top:-130px;
+bottom:-135px;
 left:-20px;
 width:100px;
 height:100px;
-box-shadow:3px 3px 3px 10px rgba(0,0,0,0.2);
-background:#000;
-color:#fff;
+box-shadow: 6px 4px 14px 0px rgb(80 80 80 / 20%);
+background:#fff;
+color:#000;
 display:none;
-z-index:90;
+z-index:999;
 justify-content:center;
 align-items:center;
 flex-direction:column;
 line-height:2.5;
 padding:1rem;
+border-radius: 3px;
+
+&::after {
+    content: '';
+    position: absolute;
+    top:-12px;
+    left:30px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+    border-radius: 3px;
+
+}
 `
 
 function displayControllerKeycap(event){
@@ -70,8 +84,10 @@ export default function KeycapComponent(props) {
     return(
         <KeyDivContainer onMouseEnter={(event)=>{displayControllerKeycap(event)}} onMouseLeave={()=>{hiddenControllerKeycap(props.id)}} id={props.id} background={props.background}  fontColor={props.fontColor} color={props.color} size={props.size}>
             <ControllerKeycapDiv className='controller-keycap' >
-                Pick a color
-                <input type='color' onChange={(event)=>{props.searchKeycap(props.reference,event.target.value)}} />
+                <div class='controller-keycap-wrapper'>
+                    Pick a color
+                    <input type='color' onChange={(event)=>{props.searchKeycap(props.reference,event.target.value)}} />
+                </div>
             </ControllerKeycapDiv>
             <KeyDiv  background={props.background} fontColor={props.fontColor} color={props.color} ref={props.reference}>
                 {props.text}
